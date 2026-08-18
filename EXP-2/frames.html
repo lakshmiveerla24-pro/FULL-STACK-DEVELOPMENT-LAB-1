@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frames Example</title>
+</head>
+
+<body>
+<p align="right"><b>24K61A12B9<br>V.PADMA</b></p>
+
+    <h2 align="center">FRAMES DEMONSTRATION</h2>
+
+    <!-- First Frame - Image -->
+    <iframe
+        srcdoc="
+        <html>
+        <body>
+        <center>
+        <h3>College Image</h3>
+        <img src='college.jpg' width='250' height='120'>
+        </center>
+        </body>
+        </html>"
+        width="100%"
+        height="180"
+        frameborder="1">
+    </iframe>
+
+
+    <!-- Second Frame - Paragraph -->
+    <iframe
+        srcdoc="
+        <html>
+        <body>
+        <h3>About Our College</h3>
+        <p>
+        Our college provides quality education and a good learning
+        environment. It helps students develop technical,
+        communication and professional skills.
+        </p>
+        </body>
+        </html>"
+        width="100%"
+        height="180"
+        frameborder="1">
+    </iframe>
+
+
+    <!-- Third Frame - Hyperlink -->
+    <iframe
+        srcdoc="
+        <html>
+        <body>
+        <center>
+        <h3>Useful Links</h3>
+
+        <a href='https://www.google.com' target='_blank'>
+        Visit Google
+        </a>
+
+        <br><br>
+
+        <a href='https://www.wikipedia.org' target='_blank'>
+        Visit Wikipedia
+        </a>
+
+        </center>
+        </body>
+        </html>"
+        width="100%"
+        height="180"
+        frameborder="1">
+    </iframe>
+
+    <noframes>
+        Your browser does not support frames.
+    </noframes>
+
+</body>
+</html>
