@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Selector Forms</title>
+<p align="right"><b>24K61A12B9<br>V.PADMA</b></p>
+    <style>
+        /* i. Simple Selectors */
+
+        /* Element selector */
+        h2 {
+            color: blue;
+        }
+
+        /* ID selector */
+        #para1 {
+            color: red;
+        }
+
+        /* Class selector */
+        .box {
+            background-color: lightyellow;
+            padding: 10px;
+        }
+
+        /* Group selector */
+        h3, p {
+            font-family: Arial;
+        }
+
+        /* Universal selector */
+        * {
+            box-sizing: border-box;
+        }
+
+
+        /* ii. Combinator Selectors */
+
+        /* Descendant selector */
+        div p {
+            color: green;
+        }
+
+        /* Child selector */
+        div > span {
+            color: purple;
+        }
+
+        /* Adjacent sibling selector */
+        h4 + p {
+            background-color: lightblue;
+        }
+
+        /* General sibling selector */
+        h5 ~ p {
+            color: brown;
+        }
+
+
+        /* iii. Pseudo-class selector */
+
+        a:hover {
+            color: red;
+        }
+
+        input:focus {
+            background-color: lightyellow;
+        }
+
+
+        /* iv. Pseudo-element selector */
+
+        p::first-letter {
+            font-size: 30px;
+            color: red;
+        }
+
+        p::after {
+            content: " ★";
+        }
+
+
+        /* v. Attribute selector */
+
+        input[type="text"] {
+            border: 2px solid blue;
+        }
+
+        input[type="email"] {
+            border: 2px solid green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>CSS Selector Forms</h2>
+
+    <!-- Simple Selectors -->
+    <h3>Simple Selectors</h3>
+
+    <p id="para1">This paragraph uses ID selector.</p>
+
+    <p class="box">This paragraph uses Class selector.</p>
+
+    <p>This paragraph uses Element selector.</p>
+
+
+    <!-- Combinator Selectors -->
+    <h3>Combinator Selectors</h3>
+
+    <div>
+        <p>This is a descendant paragraph.</p>
+        <span>This is a child element.</span>
+    </div>
+
+    <h4>Heading</h4>
+    <p>This is an adjacent sibling.</p>
+
+    <h5>Another Heading</h5>
+    <p>This is a general sibling.</p>
+    <p>This is another general sibling.</p>
+
+
+    <!-- Pseudo-class -->
+    <h3>Pseudo-class Selector</h3>
+
+    <a href="#">Move mouse over this link</a>
+
+    <br><br>
+
+    <input type="text" placeholder="Click here">
+    <br><br>
+
+
+    <!-- Pseudo-element -->
+    <h3>Pseudo-element Selector</h3>
+
+    <p>This paragraph demonstrates pseudo-element selector.</p>
+
+
+    <!-- Attribute Selector -->
+    <h3>Attribute Selector</h3>
+
+    <input type="text" placeholder="Name">
+    <br><br>
+
+    <input type="email" placeholder="Email">
+
+</body>
+</html>
