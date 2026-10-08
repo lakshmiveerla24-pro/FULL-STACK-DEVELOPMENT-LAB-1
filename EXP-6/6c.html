@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Input</title>
+</head>
+
+<body>
+<p align="right"><b>V.Padma <br>24K61A12B9</br></b></p>
+
+    <h2>Different Ways of Taking Input</h2>
+
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <button onclick="getInput()">Submit</button>
+
+    <p id="result"></p>
+
+    <script>
+
+        function getInput() {
+
+            let name = document.getElementById("name").value;
+
+            document.getElementById("result").innerHTML =
+                "Your name is: " + name;
+
+            let age = prompt("Enter your age:");
+
+            console.log("Age: " + age);
+        }
+
+    </script>
+
+</body>
+</html>
