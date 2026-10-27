@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Currency Denomination</title>
+</head>
+<body>
+<p align="right"><b>V.Padma <br>24K61A12B9</br></b></p>
+<script>
+    let amount = parseInt(prompt("Enter the deposited amount:"));
+
+    let denominations = [100, 50, 20, 10, 5, 2, 1];
+
+    for (let i = 0; i < denominations.length; i++) {
+        let count = Math.floor(amount / denominations[i]);
+
+        if (count > 0) {
+            document.write(count + " - " + denominations[i] + "'s<br>");
+        }
+
+        amount = amount % denominations[i];
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<body>
+<p align="right"><b>V.Padma <br>24K61A12B9</br></b></p>
+<script>
+var student = {
+    name: "Ravi",
+    age: 20,
+    course: "B.Tech"
+};
+
+document.write("Using for-in:<br>");
+for(var key in student) {
+    document.write(key + ": " + student[key] + "<br>");
+}
+
+document.write("Using forEach:<br>");
+Object.entries(student).forEach(function(item) {
+    document.write(item[0] + ": " + item[1] + "<br>");
+});
+
+document.write("Using for-of:<br>");
+for(var item of Object.entries(student)) {
+    document.write(item[0] + ": " + item[1] + "<br>");
+}
+</script>
+</body>
+</html>
