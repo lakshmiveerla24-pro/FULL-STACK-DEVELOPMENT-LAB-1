@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+
+<p align="right"><b>V.Padma <br>24K61A12B9</b></p>
+
+<h2>Registration Form</h2>
+
+<form onsubmit="return validate()">
+    Name:
+    <input type="text" id="name"><br><br>
+
+    Mobile:
+    <input type="text" id="mobile"><br><br>
+
+    E-mail:
+    <input type="text" id="email"><br><br>
+
+    <input type="submit" value="Register">
+</form>
+
+<script>
+function validate() {
+    let name = document.getElementById("name").value;
+    let mobile = document.getElementById("mobile").value;
+    let email = document.getElementById("email").value;
+
+    let namePattern = /^[A-Za-z][A-Za-z0-9]{5,}$/;
+    let mobilePattern = /^[0-9]{10}$/;
+    let emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{3,}$/;
+
+    if (!namePattern.test(name)) {
+        alert("Invalid Name");
+        return false;
+    }
+
+    if (!mobilePattern.test(mobile)) {
+        alert("Mobile number must contain 10 digits");
+        return false;
+    }
+
+    if (!emailPattern.test(email)) {
+        alert("Invalid E-mail");
+        return false;
+    }
+
+    alert("Registration Successful");
+    return false;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+<html>
+<head>
+    <title>JavaScript Functions</title>
+</head>
+<body>
+
+<p align="right"><b>V.Padma <br>24K61A12B9</b></p>
+
+<script>
+function factorial(n) {
+    let f = 1;
+    for (let i = 1; i <= n; i++)
+        f = f * i;
+    document.write("Factorial = " + f + "<br>");
+}
+
+function fibonacci(n) {
+    let a = 0, b = 1;
+    document.write("Fibonacci Series: ");
+    while (a <= n) {
+        document.write(a + " ");
+        let c = a + b;
+        a = b;
+        b = c;
+    }
+    document.write("<br>");
+}
+
+function prime(n) {
+    document.write("Prime Numbers: ");
+    for (let i = 2; i <= n; i++) {
+        let flag = 0;
+        for (let j = 2; j < i; j++) {
+            if (i % j == 0) {
+                flag = 1;
+                break;
+            }
+        }
+        if (flag == 0)
+            document.write(i + " ");
+    }
+    document.write("<br>");
+}
+
+function palindrome(n) {
+    let rev = 0, temp = n;
+    while (temp > 0) {
+        rev = rev * 10 + temp % 10;
+        temp = Math.floor(temp / 10);
+    }
+
+    if (rev == n)
+        document.write(n + " is a Palindrome");
+    else
+        document.write(n + " is not a Palindrome");
+}
+
+let n = parseInt(prompt("Enter a number:"));
+
+factorial(n);
+fibonacci(n);
+prime(n);
+palindrome(n);
+</script>
+
+</body>
+</html>
